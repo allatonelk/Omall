@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omall", "Omall\Omall.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{1555362C-E77F-4BEE-870B-8D804486EF92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{0E029910-32FF-4C52-9658-25DA59294A55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1555362C-E77F-4BEE-870B-8D804486EF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1555362C-E77F-4BEE-870B-8D804486EF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1555362C-E77F-4BEE-870B-8D804486EF92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E029910-32FF-4C52-9658-25DA59294A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E029910-32FF-4C52-9658-25DA59294A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E029910-32FF-4C52-9658-25DA59294A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E029910-32FF-4C52-9658-25DA59294A55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
