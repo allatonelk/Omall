@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Models.PackageVM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Default Packages</h2>
+@{ 
+    var PkgTypes = Model.GroupBy(x => x.PackageTypeName, (k,g) => new { y = k } ).ToList();
+}
+
+@foreach (var pkg in PkgTypes)
+{
+    var pkgDetails = Model.Where(x => x.PackageTypeName == pkg.y);
+    <h3><b>@pkg.y</b> </h3>
+    { 
+        var price = pkgDetails.Select(x => x.PackageDefPrice).FirstOrDefault();
+    
+    <span> Price : @(price == null ?  "Free" : price.Value.ToString("N")) </span>
+    }
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PackageItemName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.PkgDefValue)
+            </th>
+           
+
+        </tr>
+
+        @foreach (var item in pkgDetails)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PackageItemName)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.PkgDefValue)
+                </td>
+               
+
+            </tr>
+        }
+
+    </table>
+}
+
+
